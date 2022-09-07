@@ -22,12 +22,16 @@ class CreateNewTaskScreen extends StatelessWidget {
     return ScaffoldCustom(
       appBarCustom: AppBarCustom(
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.menu,
-              color: ColorManager.black,
-              size: 40,
+          Padding(
+            padding:  EdgeInsets.only(right: 20.0.w),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.menu,
+                color: ColorManager.black,
+                size: 40,
+              ),
+
             ),
           ),
         ],
@@ -108,7 +112,6 @@ class CreateNewTaskScreen extends StatelessWidget {
                                 color: taskCubit.isCategorySelected(index)
                                     ? ColorManager.white
                                     : ColorManager.paragraphColor,
-
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
@@ -282,7 +285,8 @@ class CreateNewTaskScreen extends StatelessWidget {
                         textColor: ColorManager.white,
                         fontSize: 18.sp,
                         fontWeight: FontWeight.w600,
-                        width: 80.w,
+                        width: 120.w,
+                        height: 60.h,
                         onPressed: () {
                           if (taskCubit.formKey.currentState!.validate()) {}
                         },

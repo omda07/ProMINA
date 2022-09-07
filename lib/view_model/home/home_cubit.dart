@@ -13,7 +13,7 @@ class HomeCubit extends Cubit<HomeStates> {
   List dayListNum = [];
   DateTime dateTime = DateTime.now();
   ScrollController scrollController = ScrollController();
-  int tabIndex = 0;
+  int tabIndex = DateTime.now().day - 1;
 
   // this function to get how many days in a month
   int getDaysInMonth() {
@@ -49,7 +49,6 @@ class HomeCubit extends Cubit<HomeStates> {
       dayListNum.add(DateFormat.d()
           .format(DateTime.utc(dateTime.year, dateTime.month, i))
           .toString());
-
     }
     emit(GetDayNumAndText());
   }

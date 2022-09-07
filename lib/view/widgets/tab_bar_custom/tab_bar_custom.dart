@@ -26,7 +26,7 @@ class TabBarCustom extends StatelessWidget {
       child: DefaultTabController(
         animationDuration: const Duration(milliseconds: 800),
         length: myTabs.length,
-        initialIndex: 0,
+        initialIndex: DateTime.now().day - 1,
         child: Column(
           children: [
             normalTab!

@@ -40,14 +40,14 @@ class ElevatedButtonCustom extends StatelessWidget {
       onPressed: () {
         onPressed!();
       },
-      style: ElevatedButton.styleFrom(
+      style: ElevatedButton.styleFrom(minimumSize: Size(width!.w, height!.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radius!.r),
             side: BorderSide(color: borderColor ?? ColorManager.swatch),
           ), backgroundColor: colors ?? ColorManager.swatch,
           elevation: elevation,
-          padding:
-              EdgeInsets.symmetric(horizontal: width!.w, vertical: height!.h),
+          // padding:
+          //     EdgeInsets.symmetric(horizontal: width!.w, vertical: height!.h),
           textStyle: TextStyle(
             fontSize: fontSize ?? 16.sp,
             fontWeight: FontWeight.bold,
